@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Slider from './components/slider';  
+import NavigationMenu from './components/menu';
+import Rooms from './components/rooms';
+import AboutUsSection from './components/about_us';
 
 function App() {
   return (
     <div className="site-wrap">
+
   <div className="site-mobile-menu">
     <div className="site-mobile-menu-header">
       <div className="site-mobile-menu-close mt-3">
@@ -30,51 +35,7 @@ function App() {
                       <span className="icon-menu h3" />
                     </a>
                   </div>
-                  <ul className="site-menu js-clone-nav d-none d-lg-block">
-                    <li className="active">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li className="has-children">
-                      <a href="rooms.html">Rooms</a>
-                      <ul className="dropdown arrow-top">
-                        <li>
-                          <a href="rooms.html">Standard Room</a>
-                        </li>
-                        <li>
-                          <a href="rooms.html">Family Room</a>
-                        </li>
-                        <li>
-                          <a href="rooms.html">Single Room</a>
-                        </li>
-                        <li className="has-children">
-                          <a href="rooms.html">Rooms</a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="rooms.html">America</a>
-                            </li>
-                            <li>
-                              <a href="rooms.html">Europe</a>
-                            </li>
-                            <li>
-                              <a href="rooms.html">Asia</a>
-                            </li>
-                            <li>
-                              <a href="rooms.html">Africa</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="events.html">Events</a>
-                    </li>
-                    <li>
-                      <a href="about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact</a>
-                    </li>
-                  </ul>
+                  <NavigationMenu/>
                 </div>
               </nav>
             </div>
@@ -83,185 +44,12 @@ function App() {
       </div>
     </div>
   </div>
-  <div className="slide-one-item home-slider owl-carousel">
-    <div
-      className="site-blocks-cover overlay"
-      style={{ backgroundImage: "url(images/hero_1.jpg)" }}
-      data-aos="fade"
-      data-stellar-background-ratio="0.5"
-    >
-      <div className="container">
-        <div className="row align-items-center justify-content-center">
-          <div className="col-md-7 text-center" data-aos="fade">
-            <h1 className="mb-2">Welcome To Suites</h1>
-            <h2 className="caption">Hotel &amp; Resort</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="site-blocks-cover overlay"
-      style={{ backgroundImage: "url(images/hero_2.jpg)" }}
-      data-aos="fade"
-      data-stellar-background-ratio="0.5"
-    >
-      <div className="container">
-        <div className="row align-items-center justify-content-center">
-          <div className="col-md-7 text-center" data-aos="fade">
-            <h1 className="mb-2">Unique Experience</h1>
-            <h2 className="caption">Enjoy With Us</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="site-blocks-cover overlay"
-      style={{ backgroundImage: "url(images/hero_3.jpg)" }}
-      data-aos="fade"
-      data-stellar-background-ratio="0.5"
-    >
-      <div className="container">
-        <div className="row align-items-center justify-content-center">
-          <div className="col-md-7 text-center" data-aos="fade">
-            <h1 className="mb-2">Relaxing Room</h1>
-            <h2 className="caption">Your Room, Your Stay</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="site-section bg-light">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 mx-auto text-center mb-5 section-heading">
-          <h2 className="mb-5">Our Rooms</h2>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-6 col-lg-4 mb-5">
-          <div className="hotel-room text-center">
-            <a href="#" className="d-block mb-0 thumbnail">
-              <img src="images/img_1.jpg" alt="Image" className="img-fluid" />
-            </a>
-            <div className="hotel-room-body">
-              <h3 className="heading mb-0">
-                <a href="#">Standard Room</a>
-              </h3>
-              <strong className="price">$350.00 / per night</strong>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mb-5">
-          <div className="hotel-room text-center">
-            <a href="#" className="d-block mb-0 thumbnail">
-              <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
-            </a>
-            <div className="hotel-room-body">
-              <h3 className="heading mb-0">
-                <a href="#">Family Room</a>
-              </h3>
-              <strong className="price">$400.00 / per night</strong>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mb-5">
-          <div className="hotel-room text-center">
-            <a href="#" className="d-block mb-0 thumbnail">
-              <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
-            </a>
-            <div className="hotel-room-body">
-              <h3 className="heading mb-0">
-                <a href="#">Single Room</a>
-              </h3>
-              <strong className="price">$255.00 / per night</strong>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mb-5">
-          <div className="hotel-room text-center">
-            <a href="#" className="d-block mb-0 thumbnail">
-              <img src="images/img_1.jpg" alt="Image" className="img-fluid" />
-            </a>
-            <div className="hotel-room-body">
-              <h3 className="heading mb-0">
-                <a href="#">Deluxe Room</a>
-              </h3>
-              <strong className="price">$150.00 / per night</strong>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mb-5">
-          <div className="hotel-room text-center">
-            <a href="#" className="d-block mb-0 thumbnail">
-              <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
-            </a>
-            <div className="hotel-room-body">
-              <h3 className="heading mb-0">
-                <a href="#">Luxury Room</a>
-              </h3>
-              <strong className="price">$200.00 / per night</strong>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-lg-4 mb-5">
-          <div className="hotel-room text-center">
-            <a href="#" className="d-block mb-0 thumbnail">
-              <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
-            </a>
-            <div className="hotel-room-body">
-              <h3 className="heading mb-0">
-                <a href="#">Single Room</a>
-              </h3>
-              <strong className="price">$155.00 / per night</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="site-section">
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-md-6 mb-5 mb-md-0">
-          <div className="img-border">
-            <a
-              href="https://vimeo.com/28959265"
-              className="popup-vimeo image-play"
-            >
-              <span className="icon-wrap">
-                <span className="icon icon-play" />
-              </span>
-              <img src="images/img_2.jpg" alt="" className="img-fluid" />
-            </a>
-          </div>
-          <img
-            src="images/img_1.jpg"
-            alt="Image"
-            className="img-fluid image-absolute"
-          />
-        </div>
-        <div className="col-md-5 ml-auto">
-          <div className="section-heading text-left">
-            <h2 className="mb-5">About Us</h2>
-          </div>
-          <p className="mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
-            nisi Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-            nobis magni eaque velit eum, id rem eveniet dolor possimus
-            voluptas..
-          </p>
-          <p>
-            <a
-              href="https://vimeo.com/28959265"
-              className="popup-vimeo text-uppercase"
-            >
-              Watch Video <span className="icon-arrow-right small" />
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Slider />
+
+  <Rooms />
+
+  <AboutUsSection />
+
   <div className="site-section">
     <div className="container">
       <div className="row">
