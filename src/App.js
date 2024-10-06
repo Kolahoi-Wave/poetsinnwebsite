@@ -4,6 +4,8 @@ import Slider from './components/slider';
 import NavigationMenu from './components/menu';
 import Rooms from './components/rooms';
 import AboutUsSection from './components/about_us';
+import Gallery from './components/gallery';
+import Amenities from './components/amenities';
 
 function App() {
   return (
@@ -50,141 +52,9 @@ function App() {
 
   <AboutUsSection />
 
-  <div className="site-section">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 mx-auto text-center mb-5 section-heading">
-          <h2 className="mb-5">Hotel Features</h2>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-pool display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Swimming Pool</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-desk display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Hotel Teller</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-exit display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Fire Exit</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-parking display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Car Parking</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-hair-dryer display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Hair Dryer</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-minibar display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Minibar</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-drink display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Drinks</h2>
-          </div>
-        </div>
-        <div className="col-sm-6 col-md-4 col-lg-3">
-          <div className="text-center p-4 item">
-            <span className="flaticon-cab display-3 mb-3 d-block text-primary" />
-            <h2 className="h5">Car Airport</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="py-5 upcoming-events"
-    style={{
-      backgroundImage: 'url("images/hero_1.jpg")',
-      backgroundAttachment: "fixed"
-    }}
-  >
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-md-6">
-          <h2 className="text-white">Summer Promo 50% Off</h2>
-          <a
-            href="#"
-            className="text-white btn btn-outline-warning rounded-0 text-uppercase"
-          >
-            Avail Now
-          </a>
-        </div>
-        <div className="col-md-6">
-          <span className="caption">The Promo will start in</span>
-          <div id="date-countdown" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="site-section">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 mx-auto text-center mb-5 section-heading">
-          <h2 className="mb-5">Our Gallery</h2>
-        </div>
-      </div>
-      <div className="row no-gutters">
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_1.jpg" className="image-popup img-opacity">
-            <img src="images/img_1.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_2.jpg" className="image-popup img-opacity">
-            <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_3.jpg" className="image-popup img-opacity">
-            <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_4.jpg" className="image-popup img-opacity">
-            <img src="images/img_4.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_4.jpg" className="image-popup img-opacity">
-            <img src="images/img_4.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_5.jpg" className="image-popup img-opacity">
-            <img src="images/img_5.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_6.jpg" className="image-popup img-opacity">
-            <img src="images/img_6.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-        <div className="col-md-6 col-lg-3">
-          <a href="images/img_7.jpg" className="image-popup img-opacity">
-            <img src="images/img_7.jpg" alt="Image" className="img-fluid" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Amenities />
+  
+  <Gallery />
   <div className="site-section block-15">
     <div className="container">
       <div className="row">
@@ -548,3 +418,6 @@ function App() {
 }
 
 export default App;
+
+
+
