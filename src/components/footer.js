@@ -5,10 +5,10 @@ function Footer() {
   const quickMenuItems = ['About', 'Services', 'Recognitions', 'Careers'];
   const amenitiesItems = ['Wifi', 'Television', 'Intercom', 'Restaurant'];
   const socialIcons = [
-    { href: '#', className: 'icon-facebook' },
-    { href: '#', className: 'icon-twitter' },
-    { href: '#', className: 'icon-instagram' },
-    { href: '#', className: 'icon-vimeo' }
+    { href: '#home', className: 'icon-facebook' },
+    { href: '#home', className: 'icon-twitter' },
+    { href: '#home', className: 'icon-instagram' },
+    { href: '#home', className: 'icon-vimeo' }
   ];
 
   return (
@@ -19,11 +19,11 @@ function Footer() {
           <p>
             Poet’s Inn, nestled in Pahalgam Valley, offers a serene retreat where nature and comfort unite. With the Lidder River and mountains as your backdrop, enjoy a personalised stay.
           </p>
-          <p>
+          {/* <p>
             <a href="#" className="btn btn-primary pill text-white px-4">
               Read More
             </a>
-          </p>
+          </p> */}
         </div>
         <div className="col-md-6">
           <div className="row">
@@ -31,7 +31,7 @@ function Footer() {
               <h3 className="footer-heading mb-4 text-white">Quick Menu</h3>
               <ul className="list-unstyled">
                 {quickMenuItems.map((item, index) => (
-                  <li key={index}><a href="#">{item}</a></li>
+                  <li key={index}><a href="#home">{item}</a></li>
                 ))}
               </ul>
             </div>
@@ -39,7 +39,7 @@ function Footer() {
               <h3 className="footer-heading mb-4 text-white">Amenities</h3>
               <ul className="list-unstyled">
                 {amenitiesItems.map((item, index) => (
-                  <li key={index}><a href="#">{item}</a></li>
+                  <li key={index}><a href="#home">{item}</a></li>
                 ))}
               </ul>
             </div>

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Slider from './components/slider';  
 import NavigationMenu from './components/menu';
@@ -35,7 +35,7 @@ function App() {
               <nav className="site-navigation text-right" role="navigation">
                 <div className="container">
                   <div className="d-inline-block d-lg-none  ml-md-0 mr-auto py-3">
-                    <a href="#" className="site-menu-toggle js-menu-toggle">
+                    <a href="#home" className="site-menu-toggle js-menu-toggle">
                       <span className="icon-menu h3" />
                     </a>
                   </div>

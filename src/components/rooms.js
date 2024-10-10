@@ -4,22 +4,22 @@ const roomsData = [
   {
     name: "Double Room with balcony",
     image: "images/img_1.jpg",
-    price: 350.00
+    price: 3499.00
   },
   {
     name: "Family Room with garden view",
     image: "images/img_2.jpg",
-    price: 400.00
+    price: 4500.00
   },
   {
     name: "Double room with garden view",
     image: "images/img_3.jpg",
-    price: 255.00
+    price: 3499.00
   },
   {
     name: "Double Room",
     image: "images/img_1.jpg",
-    price: 150.00
+    price: 3199.00
   }
 ];
 
@@ -27,12 +27,12 @@ function RoomItem({ name, image, price }) {
   return (
     <div className="col-md-6 col-lg-4 mb-5">
       <div className="hotel-room text-center">
-        <a href="#" className="d-block mb-0 thumbnail">
+        <a href="#rooms" className="d-block mb-0 thumbnail">
           <img src={image} alt="Room" className="img-fluid" />
         </a>
         <div className="hotel-room-body">
           <h3 className="heading mb-0">
-            <a href="#">{name}</a>
+            <a href="#rooms">{name}</a>
           </h3>
           <strong className="price">₹{price.toFixed(2)} / per night</strong>
         </div>
