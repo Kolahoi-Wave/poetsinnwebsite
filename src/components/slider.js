@@ -9,7 +9,7 @@ import '../App.css';
 function SliderItem({ image, heading, caption }) {
   return (
     <div className="site-blocks-cover overlay" style={{ backgroundImage: `url(${image})` }} data-aos="fade" data-stellar-background-ratio="0.5">
-      <div className="container">
+      <div className="container" >
         <div className="row align-items-center justify-content-center">
           <div className="col-md-7 text-center" data-aos="fade">
             <h1 className="mb-2">{heading}</h1>

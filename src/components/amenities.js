@@ -12,7 +12,7 @@ const amenities = [
 
 const Amenities = () => {
   return (
-    <div className="site-section">
+    <div className="site-section" id="amenities">
       <div className="container">
         <div className="row">
           <div className="col-md-6 mx-auto text-center mb-5 section-heading">

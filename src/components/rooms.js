@@ -43,7 +43,7 @@ function RoomItem({ name, image, price }) {
 
 function Rooms() {
   return (
-    <div className="site-section bg-light">
+    <div className="site-section bg-light" id="rooms">
       <div className="container">
         <div className="row">
           <div className="col-md-6 mx-auto text-center mb-5 section-heading">
