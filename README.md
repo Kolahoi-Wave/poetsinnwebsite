@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Poet's Inn - Official Website
+Welcome to the official repository of Poet's Inn, a tranquil homestay nestled in the beautiful Pahalgam Valley, Kashmir. This project contains the front-end code for the hotel’s website, which provides information about rooms, amenities, and other features of the inn, with easy navigation and a seamless booking experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. Project Overview
+2. Technologies Used
+3. Installation
+4. Building the Project
+5. Deployment
+6. SSL Setup
 
-## Available Scripts
+### Project Overview
 
-In the project directory, you can run:
+This website is designed to provide potential guests with all the information they need about Poet's Inn, including available rooms, amenities, and the surrounding area's natural beauty. It also allows visitors to book rooms and inquire about availability directly from the website.
 
-### `npm start`
+### Technologies Used
+- React.js: Front-end framework used to create the website's user interface.
+- Nginx: Web server used for hosting.
+- Certbot: Used to generate SSL certificates for HTTPS support.
+- Amazon EC2: Hosting server.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
+Prerequisites
+Node.js (v18.20.2 or higher)
+NPM (comes with Node.js)
+Nginx installed on your server
+Certbot for SSL certificate generation
+Clone the repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone https://github.com/your-username/poetsinn.git
+cd poetsinn
+```
 
-### `npm test`
+#### Install dependencies
+```
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Building the Project
+To create a production-ready build of the project, run the following command:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```npm run build```
+This will generate static files in the build/ directory.
 
 ### Deployment
+Copy build files to server
+After generating the build files, copy them to your server's web directory. For example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```scp -r build/ ec2-user@65.1.91.70:/home/ec2-user/webserver/ ```
+#### Nginx Configuration
+Update your Nginx configuration to serve the static files. Example configuration:
+nginx
+```
+server {
+    listen       80;
+    server_name  poetsinn.in www.poetsinn.in;
 
-### `npm run build` fails to minify
+    location /.well-known/acme-challenge/ {
+        root /home/ec2-user/webserver;
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    location / {
+        root   /home/ec2-user/webserver;
+        index  index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {}
+
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/poetsinn.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/poetsinn.in/privkey.pem;
+}
+
+```
+
+### SSL Setup
+To secure the website with HTTPS, install Certbot and generate SSL certificates for the domain:
+
+
+``` sudo certbot --nginx -d poetsinn.in -d www.poetsinn.in ```
+Once SSL is enabled, update Nginx to redirect HTTP traffic to HTTPS.
+
+
+
+
