@@ -2,49 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="stylesheet" href="%PUBLIC_URL%/fonts/icomoon/style.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.min.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/owl.carousel.min.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap-datepicker.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/animate.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/fonts/flaticon/font/flaticon.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/aos.css">
-<link rel="stylesheet" href="%PUBLIC_URL%/css/style.css"> 
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience a serene stay at Poet's Inn in the heart of Kashmir. Enjoy breathtaking views, cozy accommodations, and top amenities like free Wi-Fi, fireplace, and cycle hire." />
+    <meta name="keywords" content="Poet's Inn, Kashmir hotel, Pahalgam hotel, hotel amenities, free WiFi, cycle hire, fireplace, scenic stay, Kashmir lodging, boutique hotel" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Poet's Inn - A Cozy Retreat in Kashmir" />
+    <meta property="og:description" content="Enjoy a peaceful stay at Poet's Inn, surrounded by the beauty of Pahalgam Valley in Kashmir, offering top-notch amenities and scenic views." />
+    <meta property="og:image" content="%PUBLIC_URL%/poets_inn_logo_02.png" />
+    <meta property="og:url" content="https://www.poetsinn.in" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Poet's Inn - A Cozy Retreat in Kashmir" />
+    <meta name="twitter:description" content="Stay at Poet's Inn in Pahalgam Valley, Kashmir. Breathtaking views, free Wi-Fi, fireplace, and cycle hire." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/poets_inn_logo_02.png" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Poet's Inn</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.poetsinn.in/" />
+
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="icon" href="%PUBLIC_URL%/poets_inn_logo_02.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/poets_inn_logo_02.png" />
+    
+    <!-- CSS Files -->
+    <link rel="preload" href="%PUBLIC_URL%/fonts/icomoon/style.css" as="style" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/fonts/icomoon/style.css" />
+    <link rel="preload" href="%PUBLIC_URL%/fonts/blackmango/style.css" as="style" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/fonts/blackmango/style.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/animate.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/aos.css" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Poet's Inn | Kashmir's Cozy Retreat in Pahalgam Valley</title>
+
+    <!-- Structured Data for SEO (Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Poet's Inn",
+      "description": "Poet's Inn offers a peaceful retreat in the heart of Kashmir, with scenic views, comfortable accommodations, and top amenities like Wi-Fi, a fireplace, and cycle hire.",
+      "image": "%PUBLIC_URL%/poets_inn_logo_02.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pahalgam Valley",
+        "addressLocality": "Kashmir",
+        "addressRegion": "JK",
+        "postalCode": "192126",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91 12345 67890",
+      "url": "https://www.poetsinn.in"
+    }
+    </script>
+
   </head>
+  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
+    <!-- React App Root -->
     <div id="root"></div>
 
-    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Load jQuery first -->
     <script src="%PUBLIC_URL%/js/jquery-3.3.1.min.js"></script>
+    
+    <!-- JS Libraries (Load after jQuery) -->
     <script src="%PUBLIC_URL%/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="%PUBLIC_URL%/js/jquery-ui.js"></script>
     <script src="%PUBLIC_URL%/js/popper.min.js"></script>
@@ -55,37 +94,22 @@
     <script src="%PUBLIC_URL%/js/jquery.magnific-popup.min.js"></script>
     <script src="%PUBLIC_URL%/js/bootstrap-datepicker.min.js"></script>
     <script src="%PUBLIC_URL%/js/aos.js"></script>
-    <script src="%PUBLIC_URL%/js/mediaelement-and-player.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelement-and-player.min.js"></script>
     <script src="%PUBLIC_URL%/js/main.js"></script>
-    <script>
-          document.addEventListener('DOMContentLoaded', function() {
-                    var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
-    
-                    for (var i = 0; i < total; i++) {
-                        new MediaElementPlayer(mediaElements[i], {
-                            pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
-                            shimScriptAccess: 'always',
-                            success: function () {
-                                var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
-                                for (var j = 0; j < targetTotal; j++) {
-                                    target[j].style.visibility = 'visible';
-                                }
-                      }
-                    });
-                    }
-                });
-        </script>
-    
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'UA-23581568-13');
     </script>
 
+    <!-- Cloudflare Insights -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c5bcb535b2ccd64","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
+    
+    <!-- Feather Icons -->
     <script>
       feather.replace();
     </script>

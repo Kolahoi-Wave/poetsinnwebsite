@@ -26,7 +26,7 @@ function Slider() {
     {
       image: '/images/hero_1.jpg',
       heading: "Welcome To Poet's Inn",
-      caption: 'Home Away from Home'
+      caption: 'Where Every Stay Is A Story'
     },
     {
       image: '/images/hero_2.jpg',

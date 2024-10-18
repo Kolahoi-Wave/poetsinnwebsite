@@ -19,11 +19,6 @@ function Footer() {
           <p>
             Poet’s Inn, nestled in Pahalgam Valley, offers a serene retreat where nature and comfort unite. With the Lidder River and mountains as your backdrop, enjoy a personalised stay.
           </p>
-          {/* <p>
-            <a href="#" className="btn btn-primary pill text-white px-4">
-              Read More
-            </a>
-          </p> */}
         </div>
         <div className="col-md-6">
           <div className="row">

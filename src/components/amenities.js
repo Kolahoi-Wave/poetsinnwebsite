@@ -1,13 +1,16 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUtensils, faConciergeBell, faParking, faWifi, faBicycle, faBookOpen, faTaxi, faFire } from '@fortawesome/free-solid-svg-icons';
 
 const amenities = [
-  { icon: 'flaticon-tray', title: 'Dining' },
-  { icon: 'flaticon-desk', title: 'Hotel Teller' },
-  { icon: 'flaticon-parking', title: 'Car Parking' },
-  { icon: 'flaticon-hair-dryer', title: 'Hair Dryer' },
-  { icon: 'flaticon-tv', title: 'Television' },
-  { icon: 'flaticon-drink', title: 'Drinks' },
-  { icon: 'flaticon-cab', title: 'Car Airport' },
+  { icon: faUtensils, title: 'Dining' },
+  { icon: faConciergeBell, title: 'Hotel Teller' },
+  { icon: faParking, title: 'Car Parking' },
+  { icon: faWifi, title: 'Wifi' },
+  { icon: faBicycle, title: 'Cycle Hire' },
+  { icon: faBookOpen, title: 'Library' }, // Added library
+  { icon: faTaxi, title: 'Airport Transfer' },
+  { icon: faFire, title: 'Fireplace' }, // Updated to use Fireplace
 ];
 
 const Amenities = () => {
@@ -23,7 +26,7 @@ const Amenities = () => {
           {amenities.map((amenity, index) => (
             <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
               <div className="text-center p-4 item">
-                <span className={`${amenity.icon} display-3 mb-3 d-block text-primary`} />
+                <FontAwesomeIcon icon={amenity.icon} className="display-3 mb-3 d-block text-primary" />
                 <h2 className="h5">{amenity.title}</h2>
               </div>
             </div>
